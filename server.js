@@ -1,2 +1,10 @@
 const app = require('./app');
-app.listen(5000, () => console.log('Kanchu API running on port 5000'));
+const { errorHandler } = require('./middleware/errorHandler');
+
+// Error handling middleware (place at the END)
+app.use(errorHandler);
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log('Kanchu API running on port ' + PORT);
+});

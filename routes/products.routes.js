@@ -3,12 +3,57 @@ const router = express.Router();
 
 // Sample products data
 const products = [
-  { id: 1, name: 'Handmade Pottery', price: 2500, material: 'Clay', image: 'pottery.jpg' },
-  { id: 2, name: 'Silk Saree', price: 5000, material: 'Silk', image: 'saree.jpg' },
-  { id: 3, name: 'Wooden Handicraft', price: 1500, material: 'Wood', image: 'wood.jpg' },
-  { id: 4, name: 'Beaded Necklace', price: 3000, material: 'Beads', image: 'necklace.jpg' },
-  { id: 5, name: 'Brass Lamp', price: 4000, material: 'Brass', image: 'lamp.jpg' }
-];
+  {
+    "id": 1,
+    "name": "kanchu(Bronze or Khansa) kancham",
+    "price": 4200,
+    "material": "Bronze",
+    "image": "https://cdn.dotpe.in/longtail/item_thumbnails/8267455/ZfepcomI-800-800.webp",
+    "images": ["https://cdn.dotpe.in/longtail/item_thumbnails/8267455/ZfepcomI-800-800.webp", "pottery-2.jpg", "pottery-3.jpg", "pottery-4.jpg"],
+    "rating": 4.7,
+    "reviews": 102
+  },
+  {
+    "id": 2,
+    "name": "Brass design parath",
+    "price": 2000,
+    "material": "Bronze",
+    "image": "https://cdn.dotpe.in/longtail/item_thumbnails/8267455/QCz5OpYV-800-800.webp",
+    "images": ["https://cdn.dotpe.in/longtail/item_thumbnails/8267455/QCz5OpYV-800-800.webp", "saree-2.jpg", "saree-3.jpg"],
+    "rating": 4.9,
+    "reviews": 111
+  },
+  {
+    "id": 3,
+    "name": "Brass kagu",
+    "price": 500,
+    "material": "Brass",
+    "image": "https://cdn.dotpe.in/longtail/store-items/8267455/985o539d.jpeg",
+    "images": ["https://cdn.dotpe.in/longtail/store-items/8267455/985o539d.jpeg","https://cdn.dotpe.in/longtail/item_thumbnails/8267455/uscXtzKD-800-800.webp"],
+    "rating": 3,
+    "reviews": 94
+  },
+  {
+    "id": 4,
+    "name": "Brass RR ghada",
+    "price": 3000,
+    "material": "Beads",
+    "image": "https://cdn.dotpe.in/longtail/store-items/8267455/KmA4gOi6.jpeg",
+    "images": ["https://cdn.dotpe.in/longtail/store-items/8267455/KmA4gOi6.jpeg", "necklace-2.jpg", "necklace-3.jpg"],
+    "rating": 3.8,
+    "reviews": 78
+  },
+  {
+    "id": 5,
+    "name": "Brass Lamp",
+    "price": 4000,
+    "material": "Brass",
+    "image": "lamp.jpg",
+    "images": ["lamp.jpg", "lamp-2.jpg", "lamp-3.jpg", "lamp-4.jpg"],
+    "rating": 3.1,
+    "reviews": 85
+  }
+]
 
 // Get all products
 router.get('/', (req, res) => {
